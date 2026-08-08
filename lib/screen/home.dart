@@ -5,20 +5,55 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.blue,
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        padding: EdgeInsets.all(50),
-        child: Text(
-          'Hello, World!',
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+    //return Row(
+    return Column(
+      //mainAxisAlignment: MainAxisAlignment.start,
+      //mainAxisAlignment: MainAxisAlignment.center,
+      //mainAxisAlignment: MainAxisAlignment.end,
+      //mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          color: Colors.redAccent,
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+          child: const Text(
+            'hello world', 
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 3,
+            ),
           ),
         ),
-      )
+        Container(
+          color: Colors.greenAccent,
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+          child: const Text(
+            'hello world', 
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 3,  
+            ),
+          ),
+        ),
+        Container(
+          color: Colors.blueAccent,
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+          child: const Text(
+            'hello world', 
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 3,  
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
