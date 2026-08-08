@@ -5,55 +5,19 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //return Row(
     return Column(
-      //mainAxisAlignment: MainAxisAlignment.start,
-      //mainAxisAlignment: MainAxisAlignment.center,
-      //mainAxisAlignment: MainAxisAlignment.end,
-      //mainAxisAlignment: MainAxisAlignment.spaceAround,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Container(
-          color: Colors.redAccent,
-          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-          child: const Text(
-            'hello world', 
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,
-            ),
-          ),
-        ),
-        Container(
-          color: Colors.greenAccent,
-          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-          child: const Text(
-            'hello world', 
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,  
-            ),
-          ),
-        ),
-        Container(
-          color: Colors.blueAccent,
-          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-          child: const Text(
-            'hello world', 
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,  
-            ),
-          ),
+        Image.asset('assets/images/sunflower.jpg',width: 200,height: 200,),
+        SizedBox(height: 20,),
+        Image.network(
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_sky_backdrop.jpg/250px-Sunflower_sky_backdrop.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
+          width: 200,
+          height: 200,
         ),
       ],
     );
   }
-}
+}  
+      
