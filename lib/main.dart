@@ -15,10 +15,20 @@ void main() {
           backgroundColor: Colors.blue,
           centerTitle: true,
         ),
-        body: Center(child: Text('Hello, World!')),
+
+        body: Home(),
       ),
     ),
   );
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text('Hello, World!'));
+  }
 }
 
 class MyApp extends StatelessWidget {
