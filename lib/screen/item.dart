@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_68_1/model/person.dart';
+import 'package:learn_flutter_68_1/model/peson.dart';
 
 class Item extends StatefulWidget {
   const Item({super.key});
@@ -16,11 +16,14 @@ class _ItemState extends State<Item> {
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
-            border: Border.all(color: const Color.fromARGB(255, 243, 33, 138), width: 2),
+            color: people[index].job.color,
             borderRadius: BorderRadius.circular(10),
           ),
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          padding: EdgeInsets.all(30),
+          margin: const EdgeInsets.symmetric(
+            vertical: 5,
+            horizontal: 10,
+          ),
+          padding: const EdgeInsets.all(30),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -29,22 +32,28 @@ class _ItemState extends State<Item> {
                 children: [
                   Text(
                     people[index].name,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  SizedBox(height: 5),
                   Text(
-                    'อายุ: ${people[index].age} ปี',
-                    style: TextStyle(fontSize: 16),
+                    "อายุ: ${people[index].age}",
+                    style: const TextStyle(fontSize: 16),
                   ),
-                  SizedBox(height: 5),
                   Text(
-                    'อาชีพ: ${people[index].job}',
-                    style: TextStyle(fontSize: 16),
+                    "อาชีพ: ${people[index].job.title}",
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ],
               ),
-              Icon(Icons.person, size: 50, color: Colors.blue),
-            ]
+              Image.asset(
+                people[index].job.image,
+                width: 80,
+                height: 80,
+                fit: BoxFit.cover,
+              )
+            ],
           ),
         );
       },
