@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_68_1/model/peson.dart';
+import 'package:learn_flutter_68_1/model/person.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Item extends StatefulWidget {
   const Item({super.key});
@@ -19,11 +20,8 @@ class _ItemState extends State<Item> {
             color: people[index].job.color,
             borderRadius: BorderRadius.circular(10),
           ),
-          margin: const EdgeInsets.symmetric(
-            vertical: 5,
-            horizontal: 10,
-          ),
-          padding: const EdgeInsets.all(30),
+          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          padding: EdgeInsets.all(30),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -32,18 +30,17 @@ class _ItemState extends State<Item> {
                 children: [
                   Text(
                     people[index].name,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: GoogleFonts.kanit(fontSize: 20),
                   ),
+                  SizedBox(height: 5),
                   Text(
-                    "อายุ: ${people[index].age}",
-                    style: const TextStyle(fontSize: 16),
+                    'อายุ: ${people[index].age} ปี',
+                    style: GoogleFonts.kanit(fontSize: 20),
                   ),
+                  SizedBox(height: 5),
                   Text(
-                    "อาชีพ: ${people[index].job.title}",
-                    style: const TextStyle(fontSize: 16),
+                    'อาชีพ: ${people[index].job.title}',
+                    style: GoogleFonts.kanit(fontSize: 20),
                   ),
                 ],
               ),
@@ -52,8 +49,8 @@ class _ItemState extends State<Item> {
                 width: 80,
                 height: 80,
                 fit: BoxFit.cover,
-              )
-            ],
+              ),
+            ]
           ),
         );
       },
